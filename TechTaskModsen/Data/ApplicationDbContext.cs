@@ -1,5 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc.ViewEngines;
+using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
+using TechTaskModsen.Models;
 
 namespace TechTaskModsen.Data
 {
