@@ -1,21 +1,17 @@
 ﻿using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace TechTaskModsen.Models
+namespace TechTaskModsen.Models.DTOs
 {
-    public class Book
+    public class UpdBookDTO
     {
-        public int Id { get; set; }
         public int ISBN { get; set; }
         public string Genre { get; set; }
         public string Description { get; set; }
-        public DateTime? IssueTime   { get; set; }
-        public DateTime? ReturnTime { get; set; }
 
         [Column(TypeName = "bytea")]
         public byte[]? ImageData { get; set; }
 
-        public Author Author { get; set; }
-
+        public int AuthorId { get; set; }
     }
 }
