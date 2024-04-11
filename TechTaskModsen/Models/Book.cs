@@ -14,7 +14,7 @@ namespace TechTaskModsen.Models
 
         [Column(TypeName = "bytea")]
         public byte[]? ImageData { get; set; }
-
+        public int AuthorId { get; set; }
         public Author Author { get; set; }
 
     }
