@@ -1,14 +1,25 @@
 using Microsoft.EntityFrameworkCore;
 using TechTaskModsen.Data;
+using TechTaskModsen.ExceptionMiddleware;
+using TechTaskModsen.Interfaces;
+using TechTaskModsen.Repositories;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
 builder.Services.AddControllersWithViews();
+builder.Services.AddControllers();
+
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSwaggerGen();
 
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
                options.UseNpgsql(builder.Configuration.GetConnectionString("ConnectionsString")));
+
+builder.Services.AddScoped<IAuthorRepository, AuthorRepository>();
+builder.Services.AddScoped<IBookRepository, BookRepository>();
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -28,5 +39,10 @@ app.MapControllerRoute(
     pattern: "{controller}/{action=Index}/{id?}");
 
 app.MapFallbackToFile("index.html");
+
+app.UseExceptionHandlingMiddleware();
+
+app.UseSwagger();
+app.UseSwaggerUI();
 
 app.Run();
