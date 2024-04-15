@@ -1,5 +1,5 @@
 using Microsoft.EntityFrameworkCore;
-using TechTaskModsen.Data;
+using TechTaskModsen.DAL.Data;
 using TechTaskModsen.ExceptionMiddleware;
 using TechTaskModsen.Interfaces;
 using TechTaskModsen.Repositories;

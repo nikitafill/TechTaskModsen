@@ -5,15 +5,15 @@ using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
-using TechTaskModsen.Data;
+using TechTaskModsen.DAL.Data;
 
 #nullable disable
 
 namespace TechTaskModsen.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20240410083553_InitialCreate")]
-    partial class InitialCreate
+    [Migration("20240411184022_ChangeBooksFields")]
+    partial class ChangeBooksFields
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -75,10 +75,13 @@ namespace TechTaskModsen.Migrations
                     b.Property<int>("ISBN")
                         .HasColumnType("integer");
 
-                    b.Property<DateTime>("IssueTime")
+                    b.Property<byte[]>("ImageData")
+                        .HasColumnType("bytea");
+
+                    b.Property<DateTime?>("IssueTime")
                         .HasColumnType("timestamp with time zone");
 
-                    b.Property<DateTime>("ReturnTime")
+                    b.Property<DateTime?>("ReturnTime")
                         .HasColumnType("timestamp with time zone");
 
                     b.Property<int?>("UserId")

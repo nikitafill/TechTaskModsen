@@ -5,15 +5,15 @@ using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
-using TechTaskModsen.Data;
+using TechTaskModsen.DAL.Data;
 
 #nullable disable
 
 namespace TechTaskModsen.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20240411184022_ChangeBooksFields")]
-    partial class ChangeBooksFields
+    [Migration("20240411183350_ChangeBooksEntity")]
+    partial class ChangeBooksEntity
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -76,12 +76,13 @@ namespace TechTaskModsen.Migrations
                         .HasColumnType("integer");
 
                     b.Property<byte[]>("ImageData")
+                        .IsRequired()
                         .HasColumnType("bytea");
 
-                    b.Property<DateTime?>("IssueTime")
+                    b.Property<DateTime>("IssueTime")
                         .HasColumnType("timestamp with time zone");
 
-                    b.Property<DateTime?>("ReturnTime")
+                    b.Property<DateTime>("ReturnTime")
                         .HasColumnType("timestamp with time zone");
 
                     b.Property<int?>("UserId")

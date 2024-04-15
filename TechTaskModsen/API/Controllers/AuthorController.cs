@@ -2,11 +2,13 @@
 using System.Diagnostics.Metrics;
 using TechTaskModsen.Interfaces;
 using TechTaskModsen.Models;
-using TechTaskModsen.Models.DTOs;
+using TechTaskModsen.DTOs;
 using TechTaskModsen.Repositories;
 
 namespace TechTaskModsen.Controllers
 {
+    [ApiController]
+    [Route("api/[controller]")]
     public class AuthorController : ControllerBase
     {
         private readonly IAuthorRepository _authorRepository;

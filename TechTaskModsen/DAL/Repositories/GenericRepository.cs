@@ -1,6 +1,6 @@
-﻿using TechTaskModsen.Data;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 using TechTaskModsen.Interfaces;
+using TechTaskModsen.Data;
 
 namespace TechTaskModsen.Repositories
 {

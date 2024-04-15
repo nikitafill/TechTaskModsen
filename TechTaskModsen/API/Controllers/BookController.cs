@@ -17,7 +17,7 @@ namespace TechTaskModsen.Controllers
             _bookRepository = bookRepository;
             _logger = logger;
         }
-        [HttpGet]
+        [HttpGet("GetBooksList")]
         public async Task<IActionResult> GetBooksList()
         {
             try
@@ -31,7 +31,7 @@ namespace TechTaskModsen.Controllers
                 return StatusCode(StatusCodes.Status500InternalServerError, "Internal server error");
             }
         }
-        [HttpGet]
+        [HttpGet("GetBooksByAuthor")]
         public async Task<IActionResult> GetBooksByAuthor(int authorId)
         {
             try
@@ -45,7 +45,7 @@ namespace TechTaskModsen.Controllers
                 return StatusCode(StatusCodes.Status500InternalServerError, "Internal server error");
             }
         }
-        [HttpGet]
+        [HttpGet("GetBookById/{id}")]
         public async Task<IActionResult> GetBookById(int id)
         {
             try
@@ -64,6 +64,7 @@ namespace TechTaskModsen.Controllers
             }
 
         }
+        [HttpGet("GetBookByISBN/{ISBN}")]
         public async Task<IActionResult> GetBookByISBN(int ISBN)
         {
             try
