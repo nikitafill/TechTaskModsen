@@ -1,7 +1,7 @@
 ﻿using TechTaskModsen.Repositories;
 using TechTaskModsen.Models;
 
-namespace TechTaskModsen.Interfaces
+namespace TechTaskModsen.DAL.Repositories.Interfaces
 {
     public interface IBookRepository : IGenericRepository<Book>
     {

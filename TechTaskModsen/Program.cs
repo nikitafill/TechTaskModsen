@@ -1,8 +1,8 @@
 using Microsoft.EntityFrameworkCore;
+using TechTaskModsen.API.ExceptionMiddleware;
+using TechTaskModsen.API.Interfaces;
 using TechTaskModsen.DAL.Data;
-using TechTaskModsen.ExceptionMiddleware;
-using TechTaskModsen.Interfaces;
-using TechTaskModsen.Repositories;
+using TechTaskModsen.DAL.Repositories;
 
 var builder = WebApplication.CreateBuilder(args);
 
