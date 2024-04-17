@@ -1,5 +1,5 @@
-﻿using TechTaskModsen.Repositories;
-using TechTaskModsen.Models;
+﻿using TechTaskModsen.DAL.Repositories;
+using TechTaskModsen.DAL.Models;
 
 namespace TechTaskModsen.DAL.Repositories.Interfaces
 {

@@ -1,8 +1,8 @@
-﻿using TechTaskModsen.Data;
-using TechTaskModsen.Interfaces;
-using TechTaskModsen.Models;
+﻿using TechTaskModsen.DAL.Repositories.Interfaces;
+using TechTaskModsen.DAL.Data;
+using TechTaskModsen.DAL.Models;
 
-namespace TechTaskModsen.Repositories
+namespace TechTaskModsen.DAL.Repositories
 {
     public class AuthorRepository : GenericRepository<Author>, IAuthorRepository
     {

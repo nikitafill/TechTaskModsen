@@ -1,8 +1,8 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using TechTaskModsen.Interfaces;
-using TechTaskModsen.Data;
+using TechTaskModsen.DAL.Data;
+using TechTaskModsen.DAL.Repositories.Interfaces;
 
-namespace TechTaskModsen.Repositories
+namespace TechTaskModsen.DAL.Repositories
 {
     public class GenericRepository<TEntity> : IGenericRepository<TEntity> where TEntity : class, new()
     {

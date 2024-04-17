@@ -1,4 +1,4 @@
-﻿namespace TechTaskModsen.Interfaces
+﻿namespace TechTaskModsen.DAL.Repositories.Interfaces
 {
     public interface IGenericRepository<T> where T : class, new()
     {

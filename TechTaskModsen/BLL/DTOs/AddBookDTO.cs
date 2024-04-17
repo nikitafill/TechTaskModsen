@@ -1,7 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace TechTaskModsen.DTOs
+namespace TechTaskModsen.BLL.DTOs
 {
     public class AddBookDTO
     {

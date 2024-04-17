@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using TechTaskModsen.Interfaces;
+using TechTaskModsen.DAL.Repositories.Interfaces;
 using TechTaskModsen.Models;
 using TechTaskModsen.Models.DTOs;
 

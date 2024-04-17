@@ -1,6 +1,6 @@
-﻿using TechTaskModsen.Models;
+﻿using TechTaskModsen.DAL.Models;
 
-namespace TechTaskModsen.Interfaces
+namespace TechTaskModsen.DAL.Repositories.Interfaces
 {
     public interface IAuthorRepository : IGenericRepository<Author>
     {

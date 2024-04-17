@@ -1,4 +1,4 @@
-﻿namespace TechTaskModsen.DTOs
+﻿namespace TechTaskModsen.BLL.DTOs
 {
     public class RegisterDTO
     {

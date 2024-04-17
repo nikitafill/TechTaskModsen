@@ -1,4 +1,4 @@
-﻿namespace TechTaskModsen.Models
+﻿namespace TechTaskModsen.DAL.Models
 {
     public class User
     {

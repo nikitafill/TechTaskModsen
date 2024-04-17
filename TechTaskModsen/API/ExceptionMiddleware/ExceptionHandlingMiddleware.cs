@@ -1,4 +1,4 @@
-﻿namespace TechTaskModsen.ExceptionMiddleware
+﻿namespace TechTaskModsen.API.ExceptionMiddleware
 {
     public class ExceptionHandlingMiddleware
     {

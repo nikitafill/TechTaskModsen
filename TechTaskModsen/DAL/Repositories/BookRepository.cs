@@ -1,8 +1,8 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using TechTaskModsen.Data;
-using TechTaskModsen.Interfaces;
-using TechTaskModsen.Models;
-namespace TechTaskModsen.Repositories
+using TechTaskModsen.DAL.Repositories.Interfaces;
+using TechTaskModsen.DAL.Data;
+using TechTaskModsen.DAL.Models;
+namespace TechTaskModsen.DAL.Repositories
 {
     public class BookRepository: GenericRepository<Book> , IBookRepository 
     {

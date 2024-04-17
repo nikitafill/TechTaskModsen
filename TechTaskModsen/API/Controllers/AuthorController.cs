@@ -1,9 +1,9 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics.Metrics;
-using TechTaskModsen.Interfaces;
-using TechTaskModsen.Models;
-using TechTaskModsen.DTOs;
-using TechTaskModsen.Repositories;
+using TechTaskModsen.DAL.Models;
+using TechTaskModsen.BLL.DTOs;
+using TechTaskModsen.DAL.Repositories;
+using TechTaskModsen.DAL.Repositories.Interfaces;
 
 namespace TechTaskModsen.Controllers
 {
